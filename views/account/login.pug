@@ -29,17 +29,15 @@ block content
                       span.fa.fa-lock
                     input.form-control(type='password', name='password', id='password', placeholder='Password', required)
                 .form-group
-                  .row
-                    .col-xs-3
-                    .col-xs-10
-                      button.col-sm-3.btn.btn-primary(type='submit')
-                        i.fa.fa-user
-                        | Login
-                      a.btn.btn-link(href='/forgot') Forgot your password?
-                    .col-xs-1
+                  div(style='text-align:center;margin:auto;')
+                    button.btn.btn-primary(type='submit')
+                      i.fa.fa-user
+                      | Login
+                    br
+                    a.btn.btn-link(href='/forgot') Forgot your password?
                 hr.hr-text(data-content='OR')
                 .form-group
-                  .col-sm-offset-3.col-sm-7
+                  div(style='text-align:center;margin:auto;')
                     a.btn.btn-block.btn-google.btn-social(href='/auth/google')
                       i.fa.fa-google-plus
                       | Sign in with Google
@@ -47,6 +45,6 @@ block content
         .modal-footer
           .text-center
             p
-            | Don't hava an account? Sign up 
+            | Don't have an account? Sign up&nbsp;
             a.btn-link(href='/signup') here
             | .
