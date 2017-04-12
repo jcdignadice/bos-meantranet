@@ -1,25 +1,36 @@
 extends ../layout
 
 block content
-  .container(style="padding:50px 20px 0px 20px;")
-    .page-header
-      h3 Sign up
-    form.form-horizontal.well(id='signup-form', method='POST')
-      input(type='hidden', name='_csrf', value=_csrf)
-      .form-group
-        label.col-sm-3.control-label(for='email') Email:
-        .col-sm-7
-          input.form-control(type='email', name='email', id='email', placeholder='Email', autofocus, required)
-      .form-group
-        label.col-sm-3.control-label(for='password') Password:
-        .col-sm-7
-          input.form-control(type='password', name='password', id='password', placeholder='Password', required)
-      .form-group
-        label.col-sm-3.control-label(for='confirmPassword') Confirm Password:
-        .col-sm-7
-          input.form-control(type='password', name='confirmPassword', id='confirmPassword', placeholder='Confirm Password', required)
-      .form-group
-        .col-sm-offset-3.col-sm-7
-          button.btn.btn-success(type='submit')
-            i.fa.fa-user-plus
-            | Signup
+  .container(style="padding:80px 20px 0px 20px;")
+    .modal-dialog
+      .modal-content
+        .modal-heading
+          h3.text-center Sign up
+        hr
+        .modal-body
+          form.form-horizontal(id='signup-form', method='POST')
+            input(type='hidden', name='_csrf', value=_csrf)
+            .row
+              .col-xs-1
+              .col-xs-10
+                .form-group
+                  label.control-label(for='email') Email:
+                  input.form-control(type='email', name='email', id='email', placeholder='Email', autofocus, required)
+                .form-group
+                  label.control-label(for='password') Password:
+                  input.form-control(type='password', name='password', id='password', placeholder='Password', required)
+                .form-group
+                  label.control-label(for='confirmPassword') Confirm Password:
+                  input.form-control(type='password', name='confirmPassword', id='confirmPassword', placeholder='Confirm Password', required)
+                .form-group
+                  div(style='text-align:center;margin:auto;')
+                    button.btn.btn-success(type='submit')
+                      i.fa.fa-user-plus
+                      | Signup
+              .col-xs-1
+        .modal-footer
+          .text-center
+            p
+            | Already have an account? Login&nbsp;
+            a.btn-link(href='/login') here
+            | .
